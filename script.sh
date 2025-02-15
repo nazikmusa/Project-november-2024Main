@@ -17,5 +17,10 @@ function create_instance() {
     terraform apply  --auto-approve
 }
 
+function update_ip() {
+    terraform output -raw ec2 > ../ansible/hosts
+}
+
 prepare_bastion
 create_instance
+update_ip
