@@ -12,7 +12,10 @@ function prepare_bastion() {
 }
 
 function create_instance() {
-    
+    cd terraform
+    terraform init
+    terraform apply  --auto-approve
 }
 
 prepare_bastion
+create_instance
